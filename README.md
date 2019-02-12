@@ -22,7 +22,7 @@ Once the file has been downloaded, transfer the extracted txt file to the domain
 
 
 ## Create a copy of ntds.dit and the HKLM\SECURITY registry hive
-If you've ever tried navigating to %SystemRoot%\NTDS\ and copying the NTDS.dit file, you've probably experienced that it's in-use and unable to be copied. Instead of shutting down the domain controller, pulling the hard drive, and copying the file, we can use a built in utility to make a copy of it. 
+If you've ever tried navigating to %SystemRoot%\NTDS\ and copying the ntds.dit file, you've probably experienced that it's in-use and unable to be copied. Instead of shutting down the domain controller, pulling the hard drive, and copying the file, we can use a built in utility to make a copy of it. 
 
 1. Open PowerShell as an administrator on the domain controller and open the NT Directory Service Utility: 
     ```
