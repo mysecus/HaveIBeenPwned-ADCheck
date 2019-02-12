@@ -53,7 +53,7 @@ If you've ever tried navigating to %SystemRoot%\NTDS\ and copying the ntds.dit f
 
 ![alt text](https://github.com/mysecus/HaveIBeenPwned/blob/master/pics/NTDS.png "Create copy of AD Forest and Registry")
 
-## Extract the user hash from NTDS.dit and export it to a txt file
+## Extract the user hash from ntds.dit and export it to a txt file
 
 ### ![#f03c15](https://placehold.it/15/f03c15/000000?text=+) **Security Notice:** 
 
