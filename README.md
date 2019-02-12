@@ -3,7 +3,7 @@ Users commonly use passwords that are predictable and easy to remember (i.e. Win
 
 [HaveIBeenPwned (HIBP)](https://haveibeenpwned.com/) is a website developed to aggregate recent data breaches and inform users if their credentials have been compromised. Although the site does not display email addresses and passwords together due to security concerns, the site also allows users to [check if their password has been compromised](https://haveibeenpwned.com/Passwords). The password hash list is available to download for integration into other systems. This is the premise of the following work. 
 
-While it's possible to integrate [Active Directory (AD) password changes with HIBP](https://github.com/braimee/bpatty/blob/master/blue_team/pwnedpasswords.md), there's still a need for administrators to verify their current passwords are not present on a wordlist or commonly compromised by others. Service accounts are commonly set to never expire the password, so it's critical these are not easily compromised. This process will allow IT administrators a way to compare all accounts against 551 million previously compromised passwords. 
+While it's possible to [integrate Active Directory (AD) password changes with HIBP](https://github.com/braimee/bpatty/blob/master/blue_team/pwnedpasswords.md), there's still a need for administrators to verify their current passwords are not present on a wordlist or commonly compromised by others. Service accounts are commonly set to never expire the password, so it's critical these are not easily compromised. This process will allow IT administrators a way to compare all accounts against 551 million previously compromised passwords. 
 
 # Compare AD User Hash to HIBP
 To perform this comparison, we will need to perform the following activities: 
@@ -104,7 +104,7 @@ At this point, all local hash extraction is complete and ready for the compariso
 
 ## Output
 
-For an exciting project, the output is uneventful. There is no fancy HTML report, email notifications, or phone call from [Troy Hunt](https://haveibeenpwned.com/About). Instead, you're greeted with the username of the user with a compromised password, the frequency of compromises using this password, and the hash compromised. 
+For an exciting project, the output is uneventful. There is no fancy HTML report, email notifications, or phone call from [Troy Hunt](https://haveibeenpwned.com/About). Instead, you're provided with the username of the user with a compromised password, the frequency of compromises using this password, and the hash compromised. 
 
 In the following example, my account was using the password ```qwerty1!```. This is enough to meet the complexity requirements for most organizations, but it's an insecure password that's likely on every wordlist. 
 
