@@ -106,6 +106,6 @@ At this point, all local hash extraction is complete and ready for the compariso
 
 For an exciting project, the output is uneventful. There is no fancy HTML report, email notifications, or phone call from [Troy Hunt](https://haveibeenpwned.com/About). Instead, you're greeted with the username of the user with a compromised password, the frequency of compromises using this password, and the hash compromised. 
 
-In the following example, my account was using the password ```qwerty1!```. This is enough to meet the complexity requirements for most organizations, but it's an insufficently poor password that's likely on every wordlist. 
+In the following example, my account was using the password ```qwerty1!```. This is enough to meet the complexity requirements for most organizations, but it's an insecure password that's likely on every wordlist. 
 
 ![alt text](https://github.com/mysecus/HaveIBeenPwned/blob/master/pics/Final%20Output.png "Final Output")
