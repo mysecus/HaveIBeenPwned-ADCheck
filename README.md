@@ -9,7 +9,7 @@ While it's possible to [integrate Active Directory (AD) password changes with HI
 To perform this comparison, we will need to perform the following activities: 
 
 1. Download the recent NTLM Pwned password list from HIBP
-2. Create a copy of NTDS.dit and the HKLM\SECURITY registry hive
+2. Create a copy of ntds.dit and the HKLM\SYSTEM registry hive
 3. Extract the user hash from NTDS.dit and export it to a txt file
 4. Compare the user hash to the hash list provided by HIBP
 
