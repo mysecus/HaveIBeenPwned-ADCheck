@@ -10,7 +10,7 @@ To perform this comparison, we will need to perform the following activities:
 
 1. Download the recent NTLM Pwned password list from HIBP
 2. Create a copy of ntds.dit and the HKLM\SYSTEM registry hive
-3. Extract the user hash from NTDS.dit and export it to a txt file
+3. Extract the user hash from ntds.dit and export it to a txt file
 4. Compare the user hash to the hash list provided by HIBP
 
 ## Download the HIBP Pwned password list
