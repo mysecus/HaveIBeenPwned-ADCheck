@@ -6,7 +6,7 @@ Users commonly use passwords that are predictable and easy to remember (i.e. Win
 While it's possible to [integrate Active Directory (AD) password changes with HIBP](https://github.com/braimee/bpatty/blob/master/blue_team/pwnedpasswords.md), there's still a need for administrators to verify their current passwords are not present on a wordlist or commonly compromised by others. Service accounts are commonly set to never expire the password, so it's critical these are not easily compromised. This process will allow IT administrators a way to compare all accounts against 551 million previously compromised passwords. 
 
 # Compare AD User Hash to HIBP
-To perform this comparison, we will need to perform the following activities: 
+To perform this comparison, the following actions must be completed: 
 
 1. Download the recent NTLM Pwned password list from HIBP
 2. Create a copy of ntds.dit and the HKLM\SYSTEM registry hive
@@ -22,7 +22,7 @@ Once the file has been downloaded, transfer the extracted txt file to the domain
 
 
 ## Create a copy of ntds.dit and the HKLM\SYSTEM registry hive
-If you've ever tried navigating to %SystemRoot%\NTDS\ and copying the ntds.dit file, you've probably experienced that it's in-use and unable to be copied. Instead of shutting down the domain controller, pulling the hard drive, and copying the file, we can use a built in utility to make a copy of it. 
+If you've ever tried navigating to %SystemRoot%\NTDS\ and copying the ntds.dit file, you've probably experienced that it's in-use and unable to be copied. Instead of shutting down the domain controller, pulling the hard drive, and copying the file, Windows contains a built in utility to make a copy of it. 
 
 1. Open PowerShell as an administrator on the domain controller and open the NT Directory Service Utility: 
     ```
@@ -87,7 +87,7 @@ Before extracting the hashes from ntds.dit, the [DSInternals](https://github.com
 ![alt text](https://github.com/mysecus/HaveIBeenPwned/blob/master/pics/Extract%20Hash.png "Extract NTLM Hash")
 
 ## Compare AD Hash to HIBP Hash file
-At this point, all local hash extraction is complete and ready for the comparison to the HIBP Pwned hash list. In a small test environment, this process took approximately 30 minutes to complete. I have not had the opportunity to run this in a prod environment yet. 
+At this point, all local hash extraction is complete and ready for the comparison to the HIBP Pwned hash list. In a small lab environment, this process took approximately 30 minutes to complete. I have not had the opportunity to run this in a prod environment yet. 
 
 1. [Download the Match-ADHashes function](https://github.com/DGG-IT/Match-ADHashes/blob/master/Match-ADHashes.ps1)
 2. Import the function by dot sourcing the file path
