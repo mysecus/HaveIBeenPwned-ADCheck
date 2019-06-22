@@ -57,7 +57,7 @@ If you've ever tried navigating to %SystemRoot%\NTDS\ and copying the ntds.dit f
 
 ### ![#f03c15](https://placehold.it/15/f03c15/000000?text=+) **Security Notice:** 
 
-The following steps will expose the hash for the Kerberos account. If captured, attackers may then [obtain complete control into the network](https://blog.stealthbits.com/complete-domain-compromise-with-golden-tickets/), impersonate any user, and remain virtually undetectable. This is why it was recommended that the data does not leave the domain controller. All files generated during this process should be securely deleted once complete. 
+The following steps will expose the hash for the Kerberos account. If captured, attackers may then [obtain complete control into the network](https://blog.stealthbits.com/complete-domain-compromise-with-golden-tickets/), impersonate any user, and remain virtually undetectable. This is why it was recommended that the data does not leave the domain controller. All files generated during this process should be securely deleted once complete. If running the comparison on the DC, be careful not to cripple the system resources - especially if this is in production.
 
 ### Prerequisite: 
 Before extracting the hashes from ntds.dit, the [DSInternals](https://github.com/MichaelGrafnetter/DSInternals) module must be installed. 
